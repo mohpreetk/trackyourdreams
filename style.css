@@ -1,0 +1,148 @@
+html,
+body {
+    margin: 0px;
+    height: 100%;
+    font-size: 16px;
+}
+
+body {
+    background-image: url("images/header.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(255, 255, 255, 0.4);
+    background-blend-mode: lighten;
+    /* font-family: 'ABeeZee', sans-serif;
+    font-family: 'Abril Fatface', cursive;
+    font-family: 'Acme', sans-serif; 
+    (different fonts used over the page) */
+    font-family: 'Akaya Kanadaka', cursive;
+    background-attachment: fixed;
+}
+
+header {
+    height: fit-content;
+}
+
+main {
+    min-height: 65%;
+}
+
+footer {
+    height: 5%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+h1 {
+    margin-top: 0;
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+p {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+strong {
+    background-color: rgb(240, 173, 173);
+    color: red;
+    font-weight: 600;
+    font-size: 1.4rem;
+    font-family: 'Courier New', Courier, monospace;
+    visibility: hidden;
+    animation: blinkingText 1s infinite;
+}
+
+/* Error displayed as flash blinking text */
+@keyframes blinkingText {
+    0% {
+        color: red;
+    }
+
+    49% {
+        color: red;
+    }
+
+    60% {
+        color: transparent;
+    }
+
+    99% {
+        color: transparent;
+    }
+
+    100% {
+        color: red;
+    }
+}
+
+#addTask {
+    background-color: khaki;
+}
+
+.btn {
+    font-size: 1rem;
+    color: blue;
+    font-weight: 500;
+}
+
+.table {
+    font-family: 'Acme', sans-serif;
+    font-size: 1.1rem;
+}
+
+thead {
+    background-color: rgb(186, 247, 226);
+}
+
+/* changing the default bootstrap strip color */
+.table-striped>tbody>tr:nth-child(2n)>td {
+    background-color: blanchedalmond;
+}
+
+.tasks {
+    border: 2px solid blueviolet;
+}
+
+#taskListHead {
+    color: blueviolet;
+    font-weight: 200;
+    border: 2px solid;
+}
+
+.tasksCompleted {
+    border: 2px solid limegreen;
+}
+
+#taskCompletedHead {
+    color: limegreen;
+    font-weight: 200;
+    border: 2px solid;
+}
+
+.tasksDeleted {
+    border: 2px solid red;
+}
+
+#taskDeletedHead {
+    color: red;
+    font-weight: 200;
+    border: 2px solid;
+}
+
+main {
+    overflow: scroll;
+}
+
+iframe {
+    display: inline;
+    width: 200px;
+    height: 150px;
+    margin: 5px;
+}

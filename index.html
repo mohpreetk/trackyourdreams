@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Track Your Dreams - Task Tracker</title>
+
+    <!-- Google stylesheet -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=ABeeZee&family=Abril+Fatface&family=Acme&family=Akaya+Kanadaka&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap css -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <!-- File specific css -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- JS/API-->
+    <script src="https://apis.google.com/js/client.js" type="text/javascript" defer></script>
+    <script src="https://www.youtube.com/iframe_api" type="text/javascript"></script>
+    <script src="main.js" defer></script>
+  </head>
+
+  <body>
+    <header>
+      <div class="text-center">
+        <h1>Track Your Dreams - Task Tracker</h1>
+        <h2>
+          We help your dreams come true. Set a milestone and get a step closer
+          to your dream.
+        </h2>
+        <p>
+          <em>
+            Remember food and sleep are among those small steps leading to big
+            victory.
+          </em>
+        </p>
+        <button class="btn btn-success" id="start">Start now</button>
+      </div>
+    </header>
+    <main>
+      <!-- added search input and button -->
+      <p>Need some motivation!!! Search youtube for videos to get you going.</p>
+      <div class="text-center">
+        <input type="text" placeholder="Search" id="searchTerm"/>
+        <button type="button" class="btn" id="searchBtn">Search</button>
+      </div>
+      <!-- sounds needed for the tasks -->
+      <audio id="soundCompleted">
+        <source src="audio/completed.mp3" type="audio/mpeg" />
+      </audio>
+      <audio id="soundDeleted">
+        <source src="audio/deleted.mp3" type="audio/mpeg" />
+      </audio>
+      <audio id="soundRemoved">
+        <source src="audio/removed.mp3" type="audio/mpeg" />
+      </audio>
+
+      <!-- the hidden task list layout - becomes visible when start button is clicked -->
+      <div class="container-fluid" hidden id="goalPage">
+        <!-- goal input -->
+        <div class="text-center">
+          <input type="text" placeholder="Add a new goal" id="goal" />
+          <button type="button" class="btn" id="addTask">Add</button>
+        </div>
+        <!-- error field -->
+        <p><strong id="error">Error</strong></p>
+
+        <!-- horizontal layout for three lists -->
+        <div class="row">
+          <!-- Task list -->
+          <div class="col-sm-4">
+            <table class="table table-striped tasks">
+              <thead>
+                <tr>
+                  <th id="taskListHead" colspan="4">Task List</th>
+                </tr>
+              </thead>
+              <tbody id="tasks"></tbody>
+            </table>
+          </div>
+          <!-- Tasks Completed list -->
+          <div class="col-sm-4">
+            <table class="table table-striped tasksCompleted">
+              <thead>
+                <tr>
+                  <th id="taskCompletedHead" colspan="4">Tasks completed</th>
+                </tr>
+              </thead>
+              <tbody id="tasksCompleted"></tbody>
+            </table>
+          </div>
+          <!-- Tasks Deleted list -->
+          <div class="col-sm-4">
+            <table class="table table-striped tasksDeleted">
+              <thead>
+                <tr>
+                  <th id="taskDeletedHead" colspan="4">Tasks Deleted</th>
+                </tr>
+              </thead>
+              <tbody id="tasksDeleted"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <section></section>
+    </main>
+    <footer>
+      <small>&copy 2021 - Track Your Dreams</small>
+    </footer>
+  </body>
+</html>
